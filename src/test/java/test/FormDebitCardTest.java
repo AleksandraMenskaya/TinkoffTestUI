@@ -9,11 +9,11 @@ import org.junit.jupiter.params.ParameterizedTest;
 import data.URLsDesignCard;
 import data.Pair;
 import org.junit.jupiter.params.provider.ValueSource;
-import pages.DebitCardPage;
+import pages.DebitCardFormPage;
 
 public class FormDebitCardTest extends TestBaseTinkoff {
 
-    private DebitCardPage DebitCardPage = new DebitCardPage();
+    private DebitCardFormPage DebitCardFormPage = new DebitCardFormPage();
 
     @Tag("FormDebitCardTest")
     @Tag("Positive_test")
@@ -21,7 +21,7 @@ public class FormDebitCardTest extends TestBaseTinkoff {
     @ArgumentsSource(BirthdayArgumentProvider.class)
     @ParameterizedTest(name = "Для даты {0} текст валидации должен быть {1}")
     void validationBirthdayField (String birthday, String ValidationText) {
-        DebitCardPage.openRusPage()
+        DebitCardFormPage.openRusBlackCardPage()
         .scrollToForm()
         .clickBirthdayField()
         .setBirthdayField(birthday)
@@ -36,10 +36,10 @@ public class FormDebitCardTest extends TestBaseTinkoff {
             "/cards/debit-cards/tinkoff-black/foreign/eng"
     })
     @ParameterizedTest(name = "Для url {0} отображаются правильные дизайна карт")
-    void checkChangeImage (String UrlPage) {
+    void checkChangeImage (String URL) {
          Pair[] URLs = (new URLsDesignCard()).URLs;
 
-         DebitCardPage.openURL(UrlPage)
+         DebitCardFormPage.openLocalBlackCardPage(URL)
             .scrollToForm()
             .checkPreview(URLs[3].full, URLs[3].preview)
             .clickPreview(URLs[0].preview)
@@ -57,7 +57,7 @@ public class FormDebitCardTest extends TestBaseTinkoff {
     @Tag("positive")
     @Test
     void checkProgressBar () {
-        DebitCardPage.openRusPage()
+        DebitCardFormPage.openRusBlackCardPage()
         .scrollToForm()
         .checkProgressBar("5%")
         .clickFioField()
@@ -83,7 +83,7 @@ public class FormDebitCardTest extends TestBaseTinkoff {
     })
     @ParameterizedTest(name = "Для email {0} отображаются ошибка валидации")
     void validationEmailField (String email) {
-        DebitCardPage.openRusPage()
+        DebitCardFormPage.openRusBlackCardPage()
                 .scrollToForm()
                 .clickEmailField()
                 .fillEmailField(email)

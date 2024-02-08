@@ -1,16 +1,13 @@
 package test;
 
-
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.*;
-
+import pages.DebitCardLocalPage;
 
 public class LocalizationTinkoffBlackTest extends TestBaseTinkoff {
-
+    private DebitCardLocalPage debitCardPage = new DebitCardLocalPage();
 
     @Tag("LocalizationTinkoffBlackTest")
     @DisplayName("Локализация страницы для определенного url")
@@ -22,8 +19,8 @@ public class LocalizationTinkoffBlackTest extends TestBaseTinkoff {
             "/cards/debit-cards/tinkoff-black/foreign/tj/ , Корти қулай барои ҳаёт ва кор дар Русия",
     })
     @ParameterizedTest(name = "Для url {0} текст заголовка должен быть {1}")
-    void CheckLanguage(String UrlLocal, String ValidationText) {
-        open(UrlLocal);
-        $("div[class=\"application\"]").shouldHave(text(ValidationText));
+    void CheckLanguage(String URL, String validationText) {
+        debitCardPage.openLocalPage(URL)
+        .validationHeaderText(validationText);
     }
 }

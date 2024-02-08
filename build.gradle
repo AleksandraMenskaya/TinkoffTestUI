@@ -56,13 +56,22 @@ tasks.withType(Test) {
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
-//test {
-//    useJUnitPlatform()
-//}
 
 task FormForDebitCard_Test(type: Test) {
     useJUnitPlatform {
         includeTags("FormDebitCardTest")
+    }
+}
+
+task HelpPage_Test(type: Test) {
+    useJUnitPlatform {
+        includeTags("HelpPageTest")
+    }
+}
+
+task LocalizationTinkoffBlack_Test(type: Test) {
+    useJUnitPlatform {
+        includeTags("LocalizationTinkoffBlackTest")
     }
 }
 

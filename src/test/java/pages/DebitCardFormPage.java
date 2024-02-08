@@ -1,17 +1,13 @@
 package pages;
 
-
-
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.Keys;
 
 import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-
-public class DebitCardPage {
+public class DebitCardFormPage {
     public SelenideElement formBlock =  $("#form"),
             fioClick = $("[data-qa-type=\"uikit/inputFio.inputBox.inputContainer\"]"),
             fioInput = $("[data-qa-type=\"uikit/inputFio.value.input\"]"),
@@ -26,77 +22,71 @@ public class DebitCardPage {
             previewSelected = $("[data-qa-type=\"uikit/individualDesign.previewSelected\"] img"),
             progressBar = $("[data-qa-type=\"uikit/sidebar.subtitle\"]");
 
-
-    public DebitCardPage openURL(String URL) {
-        open(URL);
-        return this;
-    }
-    public DebitCardPage openRusPage() {
-        open("/cards/debit-cards/tinkoff-black/");
-        return this;
-    }
      public SelenideElement getIndividualDesignPreview (String preview) {
          return $("[data-qa-type=\"uikit/individualDesign.preview\"] img[src=\"" + preview + "\"]");
      }
-     public DebitCardPage scrollToForm (){
+    public DebitCardFormPage openLocalBlackCardPage (String URL) {
+        open(URL);
+        return this;
+    }
+    public DebitCardFormPage openRusBlackCardPage() {
+        open("/cards/debit-cards/tinkoff-black/");
+        return this;
+    }
+     public DebitCardFormPage scrollToForm (){
          formBlock.scrollIntoView(true);
          return this;
      }
-     public DebitCardPage clickBirthdayField(){
+     public DebitCardFormPage clickBirthdayField(){
          birthdayInputWrapper.click();
          return this;
      }
-    public DebitCardPage setBirthdayField (String birthday) {
+    public DebitCardFormPage setBirthdayField (String birthday) {
         birthdayInputField.setValue(birthday).pressEnter();
         return this;
     }
-    public DebitCardPage validationFieldText (String validationText) {
+    public DebitCardFormPage validationFieldText (String validationText) {
         errorBlock.shouldHave(exactText(validationText));
         return this;
     }
-    public DebitCardPage clickPreview (String preview) {
+    public DebitCardFormPage clickPreview (String preview) {
         getIndividualDesignPreview(preview).click();
         return this;
     }
-    public DebitCardPage checkPreview (String full, String preview) {
+    public DebitCardFormPage checkPreview (String full, String preview) {
         selectedCard.shouldHave(attribute("src",full));
         previewSelected.shouldHave(attribute("src",preview));
         return this;
     }
-    public DebitCardPage checkProgressBar (String validationText) {
+    public DebitCardFormPage checkProgressBar (String validationText) {
         progressBar.shouldHave(exactText(validationText));
         return this;
     }
-    public DebitCardPage clickFioField () {
+    public DebitCardFormPage clickFioField () {
         fioClick.click();
         return this;
     }
-    public DebitCardPage fillFioField (String value) {
+    public DebitCardFormPage fillFioField (String value) {
         fioInput.setValue(value);
         fioInput.pressEnter();
         return this;
     }
-    public DebitCardPage clickMobileField () {
+    public DebitCardFormPage clickMobileField () {
         mobilePhoneClick.click();
         return this;
     }
-    public DebitCardPage fillMobileField (String value) {
+    public DebitCardFormPage fillMobileField (String value) {
         mobilePhoneInput.setValue(value);
         mobilePhoneInput.pressEnter();
         return this;
     }
-    public DebitCardPage clickEmailField () {
+    public DebitCardFormPage clickEmailField () {
         emailWrapper.click();
         return this;
     }
-    public DebitCardPage fillEmailField (String value) {
+    public DebitCardFormPage fillEmailField (String value) {
         emailInput.setValue(value);
         emailInput.pressEnter();
         return this;
     }
-
-//    public DebitCardPage clearEmail () {
-//        emailInput.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-//        return this;
-//    }
 }

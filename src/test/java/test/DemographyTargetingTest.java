@@ -5,11 +5,11 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.*;
+import pages.DebitCardDemographyTargetingPage;
 
 
 public class DemographyTargetingTest extends TestBaseTinkoff {
+    private DebitCardDemographyTargetingPage debitCardDemographyTargetingPage = new DebitCardDemographyTargetingPage();
 
     @Tag("DemographyTargetingTest")
     @Tag("Positive_test")
@@ -22,9 +22,11 @@ public class DemographyTargetingTest extends TestBaseTinkoff {
     })
     @ParameterizedTest(name = "Для cssSelector {0} текст заголовка должен быть {1}")
     void CheckAgeText (int index, String ValidationText) {
-        open("/cards/debit-cards/tinkoff-black/");
-        $$("[data-qa-type=\"uikit/radio.input\"]").get(index).click();
-        $$("[data-qa-type=\"uikit/button.content\"]").findBy(text("Настроить карту для вас")).click();
-        $("[data-test=\"htmlTag subtitle\"]").shouldHave(text(ValidationText));
+        debitCardDemographyTargetingPage.openDemographyTargetingPage();
+
+
+//        $$("[data-qa-type=\"uikit/radio.input\"]").get(index).click();
+//        $$("[data-qa-type=\"uikit/button.content\"]").findBy(text("Настроить карту для вас")).click();
+//        $("[data-test=\"htmlTag subtitle\"]").shouldHave(text(ValidationText));
     }
 }

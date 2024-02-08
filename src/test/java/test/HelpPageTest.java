@@ -3,16 +3,14 @@ package test;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
-
+import pages.HelpPage;
 
 public class HelpPageTest extends TestBaseTinkoff {
-
-    @Tag("SearchTest")
+    private pages.HelpPage helpPage = new HelpPage();
+    @Tag("HelpPageTest")
     @DisplayName("Первый элемент поисковой выдачи содержит текст запроса")
     @ParameterizedTest(name = "Если искать {0}, то первый элемент в поисковой выдачи будет {0}")
     @ValueSource(strings = {
@@ -21,18 +19,24 @@ public class HelpPageTest extends TestBaseTinkoff {
             "Кэшбэк",
             "Перевод"
     })
-    void checkOutPut(String textSearch){
-        open("/help/");
-        $("[data-qa-type=\"uikit/popover.children\"]").click();
-        $("[data-qa-type=\"uikit/popover.children\"] input[type=\"text\"]").setValue(textSearch).pressEnter();
-        $("[data-qa-type=\"uikit/dropdown.item\"]").shouldHave(text(textSearch));
+    void checkOutPut (String textSearch) {
+        helpPage.openHelpPage()
+        .clickSearchBar()
+        .setSearchBar(textSearch)
+        .validationSearchText(textSearch);
     }
 
-    // проверка кнопки ответить внизу страницы
-    // скоролл к кнопке
-    //клик
-    // проверка открытия модалки
-    // выставление оценки полож
-    // текстовое поле + отправить
-    // Спасибо за обратную связь!
+    @DisplayName("Отправка оценки")
+    @Tag("HelpPageTest")
+    @Tag("positive")
+    @Test
+    void feedbackSend () {
+        helpPage.openHelpPage()
+                .scrollToFeedbackButton()
+                .clickFeedbackButton()
+                .checkAnswerModalWindowText("Была ли полезна страница?")
+                .clickUpvoteButton()
+                .clickSkipButton()
+                .checkThankYouText("Спасибо");
+    }
 }
