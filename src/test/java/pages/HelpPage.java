@@ -1,5 +1,6 @@
 package pages;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -25,7 +26,7 @@ public class HelpPage {
     }
     public HelpPage scrollToFeedbackButton (){
         feedbackButton.scrollIntoView(true);
-        executeJavaScript("scroll(0, 150);"); //сдвиг для устранения перекрытия плавающим хедером
+        executeJavaScript("scroll(0, 200);"); //сдвиг для устранения перекрытия плавающим хедером
         return this;
     }
     public HelpPage clickUpvoteButton (){
@@ -42,6 +43,7 @@ public class HelpPage {
     }
     public HelpPage setSearchBar (String textSearch) {
         searchBarInput.setValue(textSearch).pressEnter();
+        Configuration.timeout = 5000;
         return this;
     }
     public HelpPage validationSearchText (String validationText) {
