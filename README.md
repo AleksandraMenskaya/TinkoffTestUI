@@ -70,9 +70,10 @@ ____
 Локальный запуск.
 Из корневой директории проекта выполнить:
 ```
-gradle clean test  запуск всех тестов
-gradle clean positive_tests  запуск позитивных тестов
-gradle clean negative_tests запуск негативных тестов
+gradle clean All_test  запуск всех тестов
+gradle clean Localizationtinkoffblack_test  запуск тестов проверки локализации
+gradle clean FormForDebitCard_Test запуск тестов проверки для карты tinkoff black
+gradle clean HelpPage_Test запуск тестов проверки для страницы help
 ```
 ____
 <a id="jenkins"></a>
