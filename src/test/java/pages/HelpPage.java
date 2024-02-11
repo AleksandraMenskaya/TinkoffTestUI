@@ -11,6 +11,8 @@ import static com.codeborne.selenide.Selenide.*;
 public class HelpPage {
     public SelenideElement
         searchBarWrapper = $("[data-qa-type=\"uikit/popover.children\"]"),
+
+        searchBarClick = $("[data-qa-type=\"uikit/inputAutocomplete.inputBox.leftContent\"]"),
         searchBarInput = $("[data-qa-type=\"uikit/popover.children\"] input[type=\"text\"]"),
         firstSuggest = $("[data-qa-type=\"uikit/dropdown.item\"]"),
         feedbackButton = $(By.xpath("//button[@data-qa-type='uikit/button'][descendant::*[text()='Ответить']]")),
@@ -42,7 +44,8 @@ public class HelpPage {
         return this;
     }
     public HelpPage setSearchBar (String textSearch) {
-        searchBarInput.setValue(textSearch).pressEnter();
+        searchBarInput.setValue(textSearch);
+        searchBarClick.click();
         return this;
     }
     public HelpPage validationSearchText (String validationText) {
