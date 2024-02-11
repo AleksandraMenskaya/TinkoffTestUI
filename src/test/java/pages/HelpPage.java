@@ -26,12 +26,7 @@ public class HelpPage {
     }
     public HelpPage scrollToFeedbackButton (){
         feedbackButton.scrollIntoView(false);
-//        String selector = "*[data-item-name='К оглавлению']";
-//        String command = "$(\""+selector+"\").remove()";
-//        System.out.println("-------------------------------1");
-//        System.out.println(command);
-//        System.out.println("-------------------------------2");
-        executeJavaScript("scrollBy(0, 100)"); //удаление кнопки
+        executeJavaScript("scrollBy(0, 100)"); //скролл для видимости кнопки
         return this;
     }
     public HelpPage clickUpvoteButton (){
