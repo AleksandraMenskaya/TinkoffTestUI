@@ -83,7 +83,7 @@ task Localizationtinkoffblack_test(type: Test) {
     }
 }
 
-task All_tests(type: Test) {
+task All_test(type: Test) {
     useJUnitPlatform {
         includeTags("AllTest")
     }
