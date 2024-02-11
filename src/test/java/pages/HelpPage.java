@@ -26,7 +26,7 @@ public class HelpPage {
     }
     public HelpPage scrollToFeedbackButton (){
         feedbackButton.scrollIntoView(true);
-        executeJavaScript("scroll(0, 200);"); //сдвиг для устранения перекрытия плавающим хедером
+        executeJavaScript("scroll(0, 50);"); //сдвиг для устранения перекрытия плавающим хедером
         return this;
     }
     public HelpPage clickUpvoteButton (){
@@ -43,7 +43,7 @@ public class HelpPage {
     }
     public HelpPage setSearchBar (String textSearch) {
         searchBarInput.setValue(textSearch).pressEnter();
-        Configuration.timeout = 5000;
+        Configuration.timeout = 3000;
         return this;
     }
     public HelpPage validationSearchText (String validationText) {
