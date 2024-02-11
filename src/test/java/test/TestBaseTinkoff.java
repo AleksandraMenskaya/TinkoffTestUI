@@ -25,6 +25,7 @@ public class TestBaseTinkoff {
         Configuration.pageLoadStrategy = "eager";
         Configuration.browser = config.getBrowserName();
         Configuration.browserVersion = config.getBrowserVersion();
+        Configuration.pageLoadStrategy = "eager";
 
         if (!config.getRemoteWebDriver().isEmpty()) {
             Configuration.remote = config.getRemoteWebDriver();

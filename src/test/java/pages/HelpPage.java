@@ -10,17 +10,27 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class HelpPage {
     public SelenideElement
-        searchBarWrapper = $("[data-qa-type=\"uikit/popover.children\"]"),
 
-        searchBarClick = $("[data-qa-type=\"uikit/inputAutocomplete.inputBox.leftContent\"]"),
-        searchBarInput = $("[data-qa-type=\"uikit/popover.children\"] input[type=\"text\"]"),
-        firstSuggest = $("[data-qa-type=\"uikit/dropdown.item\"]"),
+
+        titleBank = $(By.xpath("//h2/*[text()='Банк']")),
+//        blockTinkoffBlack = $(By.xpath("//a[@data-qa-type='uikit/clickable'][descendant::*[text()='Tinkoff Black']]")),
+//        blockTinkoffPlatinum = $(By.xpath("//a[@data-qa-type='uikit/clickable'][descendant::*[text()='Тинькофф Платинум']]")),
+//        blockDepositsAndAccount = $(By.xpath("//a[@data-qa-type='uikit/clickable'][descendant::*[text()='Вклады и счета']]")),
+        firstSuggest = $("[data-test=\"htmlTag title\"]"),
         feedbackButton = $(By.xpath("//button[@data-qa-type='uikit/button'][descendant::*[text()='Ответить']]")),
         feedbackIframe = $("[data-test='iframeContainer'] iframe"),
         textModalWindow = $(By.xpath("//*[text()='Была ли полезна страница?']")),
         likeImg = $("[alt=\"like\"]"),
         skipButton = $(By.xpath("//button[text()='Пропустить']")),
         thankYouText = $("p");
+
+    private SelenideElement getBlock(String title) {
+        String template = "//a[@data-qa-type='uikit/clickable'][descendant::*[text()='%1$s']]";
+        String xPath = String.format(template, title);
+
+        System.out.println("--------------------" + xPath);
+        return $(By.xpath(xPath));
+    }
 
     public HelpPage openHelpPage() {
         open("/help/");
@@ -39,16 +49,18 @@ public class HelpPage {
         feedbackButton.click();
         return this;
     }
-    public HelpPage clickSearchBar(){
-        searchBarWrapper.click();
+
+    public HelpPage scrollToTitle (){
+        titleBank.scrollIntoView(true);
         return this;
     }
-    public HelpPage setSearchBar (String textSearch) {
-        searchBarInput.setValue(textSearch).pressEnter();
-        searchBarClick.click();
+
+    public HelpPage сlickBlock(String title) {
+        getBlock(title).click();
         return this;
     }
-    public HelpPage validationSearchText (String validationText) {
+
+    public HelpPage validationSearchText(String validationText) {
         firstSuggest.shouldHave(text(validationText));
         return this;
     }
@@ -63,6 +75,10 @@ public class HelpPage {
     }
     public HelpPage checkThankYouText (String validationText) {
         thankYouText.shouldHave(text(validationText));
+        return this;
+    }
+    public HelpPage setDefaultFrame() {
+        switchTo().defaultContent();
         return this;
     }
 }

@@ -14,21 +14,21 @@ public class HelpPageTest extends TestBaseTinkoff {
     private pages.HelpPage helpPage = new HelpPage();
     @Tag("HelpPageTest")
     @Tag("AllTest")
-    @DisplayName("Проверка, что первый элемент поисковой выдачи содержит текст запроса")
-    @ParameterizedTest(name = "Если искать {0}, то первый элемент в поисковой выдачи будет {0}")
+    @DisplayName("Проверка заголовков после редиректа из плашки Банк")
+    @ParameterizedTest(name = "Найти элемент на странице [0]")
     @ValueSource(strings = {
-            "Как скачать приложение",
-            "Как написать в чат",
-            "Перевод"
+            "Tinkoff Black",
+            "Тинькофф Платинум",
+            "Вклады и счета"
     })
-    void checkOutPut (String textSearch) {
+    void checkOutPut (String text) {
         step("Открываем страницу help", () -> {
-        helpPage.openHelpPage();
+            helpPage.openHelpPage();
         });
-        step("Проверяем, что первый элемент поисковой выдачи содержит текст запроса", () -> {
-        helpPage.clickSearchBar()
-                .setSearchBar(textSearch)
-                .validationSearchText(textSearch);
+        step("Проверяем заголовки после редиректа", () -> {
+            helpPage.scrollToTitle()
+                    .сlickBlock(text)
+                    .validationSearchText(text);
         });
     }
 
@@ -50,7 +50,8 @@ public class HelpPageTest extends TestBaseTinkoff {
         });
         step("Проверяем отображения в модальном окне надписи Спасибо", () -> {
             helpPage.clickSkipButton()
-                    .checkThankYouText("Спасибо");
+                    .checkThankYouText("Спасибо")
+                    .setDefaultFrame() ;
         });
     }
 }
