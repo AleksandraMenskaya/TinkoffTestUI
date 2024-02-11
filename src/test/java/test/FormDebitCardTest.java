@@ -129,7 +129,7 @@ public class FormDebitCardTest extends TestBaseTinkoff {
                          .validationFieldText("Проверьте адрес электронной почты");
         });
     }
-    @DisplayName("Скролл к форме карты Tinkoff Black ")
+    @DisplayName("Скролл к форме карты Tinkoff Black")
     @Tag("FormDebitCardTest")
     @Tag("AllTest")
     @Test

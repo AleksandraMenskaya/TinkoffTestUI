@@ -13,7 +13,7 @@ public class LocalizationTinkoffBlackTest extends TestBaseTinkoff {
 
     @Tag("LocalizationTinkoffBlackTest")
     @Tag("AllTest")
-    @DisplayName("Локализация страницы для определенного url")
+    @DisplayName("Проверка локализации страницы для определенного url")
     @CsvSource(value = {
             "/cards/debit-cards/tinkoff-black/foreign/kg/ , Россияда жашоо жана иштөө үчүн ыңгайлуу карта",
             "/cards/debit-cards/tinkoff-black/foreign/uz/ , Rossiyada yashash va ishlash uchun qulay karta",

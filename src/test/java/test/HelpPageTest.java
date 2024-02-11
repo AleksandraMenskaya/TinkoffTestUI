@@ -14,7 +14,7 @@ public class HelpPageTest extends TestBaseTinkoff {
     private pages.HelpPage helpPage = new HelpPage();
     @Tag("HelpPageTest")
     @Tag("AllTest")
-    @DisplayName("Первый элемент поисковой выдачи содержит текст запроса")
+    @DisplayName("Проверка, что первый элемент поисковой выдачи содержит текст запроса")
     @ParameterizedTest(name = "Если искать {0}, то первый элемент в поисковой выдачи будет {0}")
     @ValueSource(strings = {
             "Как скачать приложение",
