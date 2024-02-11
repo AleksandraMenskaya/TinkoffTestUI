@@ -28,7 +28,6 @@ ____
 <a href="https://junit.org/junit5/"><img width="6%" title="JUnit5" src="src/test/resources/icon/JUnit5.png"></a>
 <a href="https://github.com/"><img width="6%" title="GitHub" src="src/test/resources/icon/GitHub.svg"></a>
 <a href="https://www.jenkins.io/"><img width="6%" title="Jenkins" src="src/test/resources/icon/Jenkins.png"></a>
-<a href="https://web.telegram.org/a/"><img width="6%" title="Telegram" src="src/test/resources/icon/Telegram.png"></a>
 <a href="https://www.atlassian.com/ru/software/jira/"><img width="5%" title="Jira" src="src/test/resources/icon/Jira.png"></a>
 </p>
 
@@ -72,7 +71,7 @@ ____
 ```
 gradle clean All_test  запуск всех тестов
 gradle clean Localizationtinkoffblack_test  запуск тестов проверки локализации
-gradle clean FormForDebitCard_Test запуск тестов проверки для карты tinkoff black
+gradle clean FormForDebitCard_Test запуск тестов проверки для формы tinkoff black
 gradle clean HelpPage_Test запуск тестов проверки для страницы help
 ```
 ____
@@ -99,7 +98,7 @@ ____
 
 ____
 <a id="allureReport"></a>
-## <img width="4%" style="vertical-align:middle" title="Allure Report" src="media/logo/Allure_Report.svg"/> Пример <a target="_blank" href="https://jenkins.autotests.cloud/job/ElenaMalysheva98-23-17/allure/"> Allure-отчета </a>
+## <img width="4%" style="vertical-align:middle" title="Allure Report" src="src/test/resources/icon/Allure_Report.png"/> Пример <a target="_blank" href="https://jenkins.autotests.cloud/job/ElenaMalysheva98-23-17/allure/"> Allure-отчета </a>
 
 
 <p align="center">
@@ -108,7 +107,7 @@ ____
 
 ____
 <a id="allure"></a>
-## <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="media/logo/AllureTestOps.svg"/>  Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/3903/dashboards"> Allure TestOps </a>
+## <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="src/test/resources/icon/Allure_TestOps.png"/>  Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/3903/dashboards"> Allure TestOps </a>
 
 На *Dashboard* в <code>Allure TestOps</code> видна статистика количества тестов: сколько из них добавлены и проходятся вручную, сколько автоматизированы. Новые тесты, а так же результаты прогона приходят по интеграции при каждом запуске сборки.
 
@@ -119,25 +118,11 @@ ____
 ![jenkins](media/screen/runAllureTestOps.png "График Jenkins")
 
 ____
-<a id="tg"></a>
-## <img width="4%" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"/> Уведомления в Telegram с использованием бота
-
-После завершения сборки, бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов в специально настроенный чат.
-
-<p align="center">
-<img width="70%" title="Telegram Notifications" src="media/screen/bot.png">
-</p>
-
-____
 <a id="video"></a>
-## <img width="4%" style="vertical-align:middle" title="Selenoid" src="media/logo/Selenoid.svg"/> Видео примера запуска тестов в Selenoid
+## <img width="4%" style="vertical-align:middle" title="Selenoid" src="src/test/resources/icon/Selenoid.png"/> Видео примера запуска тестов в Selenoid
 
 В отчетах Allure для каждого теста прикреплен не только скриншот, но и видео прохождения теста
 <p align="center">
-  Aaaaa
-    <video id="video1" width="420">
-      <source src="/AleksandraMenskaya/TinkoffTestUI/blob/main/src/test/resources/video/video.mp4" type="video/mp4">
-    Your browser does not support HTML video.
-  </video>
+ <img title="Selenoid Video" src="src/test/resources/exampleFromTestRun/gif1.gif">
 </p>
 
