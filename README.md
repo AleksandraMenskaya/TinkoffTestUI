@@ -98,7 +98,7 @@ ____
 
 ____
 <a id="allureReport"></a>
-## <img width="4%" style="vertical-align:middle" title="Allure Report" src="media/logo/Allure_Report.svg"/> Пример <a target="_blank" href="https://jenkins.autotests.cloud/job/ElenaMalysheva98-23-17/allure/"> Allure-отчета </a>
+## <img width="4%" style="vertical-align:middle" title="Allure Report" src="src/test/resources/icon/Allure_Report.png"/> Пример <a target="_blank" href="https://jenkins.autotests.cloud/job/ElenaMalysheva98-23-17/allure/"> Allure-отчета </a>
 
 
 <p align="center">
@@ -107,7 +107,7 @@ ____
 
 ____
 <a id="allure"></a>
-## <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="media/logo/AllureTestOps.svg"/>  Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/3903/dashboards"> Allure TestOps </a>
+## <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="src/test/resources/icon/Allure_TestOps.png"/>  Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/3903/dashboards"> Allure TestOps </a>
 
 На *Dashboard* в <code>Allure TestOps</code> видна статистика количества тестов: сколько из них добавлены и проходятся вручную, сколько автоматизированы. Новые тесты, а так же результаты прогона приходят по интеграции при каждом запуске сборки.
 
@@ -119,7 +119,7 @@ ____
 
 ____
 <a id="video"></a>
-## <img width="4%" style="vertical-align:middle" title="Selenoid" src="media/logo/Selenoid.svg"/> Видео примера запуска тестов в Selenoid
+## <img width="4%" style="vertical-align:middle" title="Selenoid" src="src/test/resources/icon/Selenoid.png"/> Видео примера запуска тестов в Selenoid
 
 В отчетах Allure для каждого теста прикреплен не только скриншот, но и видео прохождения теста
 <p align="center">
