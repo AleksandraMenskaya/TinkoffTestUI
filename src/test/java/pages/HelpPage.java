@@ -25,7 +25,7 @@ public class HelpPage {
     }
     public HelpPage scrollToFeedbackButton (){
         feedbackButton.scrollIntoView(true);
-        executeJavaScript("scroll(0, 100);"); //сдвиг для устранения перекрытия плавающим хедером
+        executeJavaScript("scroll(0, 150);"); //сдвиг для устранения перекрытия плавающим хедером
         return this;
     }
     public HelpPage clickUpvoteButton (){
