@@ -18,6 +18,7 @@ public class HelpPage {
         textModalWindow = $(By.xpath("//*[text()='Была ли полезна страница?']")),
         likeImg = $("[alt=\"like\"]"),
         skipButton = $(By.xpath("//button[text()='Пропустить']")),
+        removeButton = $(By.xpath("//button[text()='К оглавлению']")),
         thankYouText = $("p");
 
     public HelpPage openHelpPage() {
@@ -26,7 +27,7 @@ public class HelpPage {
     }
     public HelpPage scrollToFeedbackButton (){
         feedbackButton.scrollIntoView(true);
-        executeJavaScript("scroll(0, 50);"); //сдвиг для устранения перекрытия плавающим хедером
+        executeJavaScript("$(removeButton.remove()"); //удаление кнопки
         return this;
     }
     public HelpPage clickUpvoteButton (){
