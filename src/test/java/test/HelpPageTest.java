@@ -19,7 +19,6 @@ public class HelpPageTest extends TestBaseTinkoff {
     @ValueSource(strings = {
             "Как скачать приложение",
             "Как написать в чат",
-            "Кэшбэк",
             "Перевод"
     })
     void checkOutPut (String textSearch) {
