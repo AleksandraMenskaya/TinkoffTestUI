@@ -94,7 +94,7 @@ ____
 </p>
 <p>После выполнения сборки, в блоке <code>Build History</code> напротив номера сборки появятся значки <code>Allure Report</code> и <code>Allure TestOps</code>, при клике на которые откроется страница с сформированным html-отчетом и тестовой документацией соответственно.</p>
 
-![jenkins]("src/test/resources/icon/Jenkins.png" "График Jenkins")
+![jenkins]("src/test/resources/icon/Params_Jenkins.png.png" "График Jenkins")
 
 ____
 <a id="allureReport"></a>
