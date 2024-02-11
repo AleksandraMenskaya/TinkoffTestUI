@@ -23,7 +23,7 @@ ____
 <a href="https://selenide.org/"><img width="6%" title="Selenide" src="src/test/resources/icon/Selenide.png"></a>
 <a href="https://aerokube.com/selenoid/"><img width="6%" title="Selenoid" src="src/test/resources/icon/Selenoid.png"></a>
 <a href="https://github.com/allure-framework/allure2"><img width="6%" title="Allure Report" src="src/test/resources/icon/Allure_Report.png"></a>
-<a href="https://qameta.io/"><img width="5%" title="Allure TestOps" src="src/test/resources/icon/AllureTestOps.png"></a>
+<a href="https://qameta.io/"><img width="5%" title="Allure TestOps" src="src/test/resources/icon/Allure_TestOps.png"></a>
 <a href="https://gradle.org/"><img width="6%" title="Gradle" src="src/test/resources/icon/Gradle.png"></a>
 <a href="https://junit.org/junit5/"><img width="6%" title="JUnit5" src="src/test/resources/icon/JUnit5.png"></a>
 <a href="https://github.com/"><img width="6%" title="GitHub" src="src/test/resources/icon/GitHub.svg"></a>
