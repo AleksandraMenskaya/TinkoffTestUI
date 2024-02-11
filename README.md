@@ -143,6 +143,6 @@ ____
 
 В отчетах Allure для каждого теста прикреплен не только скриншот, но и видео прохождения теста
 <p align="center">
-  <img title="Selenoid Video" src="media/screen/Video.gif">
+  <img title="Selenoid Video" src="src/test/resources/video/video.gif">
 </p>
 
