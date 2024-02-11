@@ -44,7 +44,7 @@ public class HelpPage {
         return this;
     }
     public HelpPage setSearchBar (String textSearch) {
-        searchBarInput.setValue(textSearch);
+        searchBarInput.setValue(textSearch).pressEnter();
         searchBarClick.click();
         return this;
     }
