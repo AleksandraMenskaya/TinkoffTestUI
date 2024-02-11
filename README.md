@@ -134,6 +134,7 @@ ____
 
 В отчетах Allure для каждого теста прикреплен не только скриншот, но и видео прохождения теста
 <p align="center">
+  Aaaaa
     <video id="video1" width="420">
       <source src="/AleksandraMenskaya/TinkoffTestUI/blob/main/src/test/resources/video/video.mp4" type="video/mp4">
     Your browser does not support HTML video.
