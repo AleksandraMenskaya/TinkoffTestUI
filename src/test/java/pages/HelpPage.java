@@ -2,6 +2,8 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -22,7 +24,8 @@ public class HelpPage {
         return this;
     }
     public HelpPage scrollToFeedbackButton (){
-        feedbackButton.scrollIntoView(false);
+        feedbackButton.scrollIntoView(true);
+        executeJavaScript("scroll(0, 50);"); //сдвиг для устранения перекрытия плавающим хедером
         return this;
     }
     public HelpPage clickUpvoteButton (){

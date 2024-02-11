@@ -6,10 +6,13 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import pages.DebitCardLocalPage;
 
+import static io.qameta.allure.Allure.step;
+
 public class LocalizationTinkoffBlackTest extends TestBaseTinkoff {
-    private DebitCardLocalPage debitCardPage = new DebitCardLocalPage();
+    private DebitCardLocalPage debitCardLocalPage = new DebitCardLocalPage();
 
     @Tag("LocalizationTinkoffBlackTest")
+    @Tag("All_test")
     @DisplayName("Локализация страницы для определенного url")
     @CsvSource(value = {
             "/cards/debit-cards/tinkoff-black/foreign/kg/ , Россияда жашоо жана иштөө үчүн ыңгайлуу карта",
@@ -20,7 +23,11 @@ public class LocalizationTinkoffBlackTest extends TestBaseTinkoff {
     })
     @ParameterizedTest(name = "Для url {0} текст заголовка должен быть {1}")
     void CheckLanguage(String URL, String validationText) {
-        debitCardPage.openLocalPage(URL)
-        .validationHeaderText(validationText);
+        step("Открываем страницу tinkoff black local", () -> {
+            debitCardLocalPage.openLocalPage(URL);
+        });
+        step("Проверяем отображаение соответствующего текста ", () -> {
+            debitCardLocalPage.validationHeaderText(validationText);
+        });
     }
 }

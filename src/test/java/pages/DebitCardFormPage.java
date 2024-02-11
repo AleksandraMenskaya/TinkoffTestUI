@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.exactText;
@@ -20,7 +21,9 @@ public class DebitCardFormPage {
             errorBlock = $("div[data-qa-type=\"uikit/formRow.errorBlock\"]"),
             selectedCard = $("[data-qa-type=\"uikit/individualDesign.selectedCard\"]  img"),
             previewSelected = $("[data-qa-type=\"uikit/individualDesign.previewSelected\"] img"),
-            progressBar = $("[data-qa-type=\"uikit/sidebar.subtitle\"]");
+            progressBar = $("[data-qa-type=\"uikit/sidebar.subtitle\"]"),
+            scrollToFormButton = $(By.xpath("//button[@data-qa-type='uikit/button'][descendant::*[text()='Оформить карту']]")),
+            titleForm = $("[id=\"form-header\"] [data-test=\"htmlTag title\"]");
 
      public SelenideElement getIndividualDesignPreview (String preview) {
          return $("[data-qa-type=\"uikit/individualDesign.preview\"] img[src=\"" + preview + "\"]");
@@ -87,6 +90,14 @@ public class DebitCardFormPage {
     public DebitCardFormPage fillEmailField (String value) {
         emailInput.setValue(value);
         emailInput.pressEnter();
+        return this;
+    }
+    public DebitCardFormPage transitionToForm (){
+        scrollToFormButton.click();
+        return this;
+    }
+    public DebitCardFormPage checkTitleForm (String validationText) {
+        titleForm.shouldHave(exactText(validationText));
         return this;
     }
 }
