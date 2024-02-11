@@ -19,6 +19,7 @@ public class HelpPage {
         likeImg = $("[alt=\"like\"]"),
         skipButton = $(By.xpath("//button[text()='Пропустить']")),
         removeButton = $(By.xpath("//button[text()='К оглавлению']")),
+        removeButton1 = $("*[data-item-name=\"К оглавлению\"]"),
         thankYouText = $("p");
 
     public HelpPage openHelpPage() {
