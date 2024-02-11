@@ -43,7 +43,6 @@ public class HelpPage {
     }
     public HelpPage setSearchBar (String textSearch) {
         searchBarInput.setValue(textSearch).pressEnter();
-        Configuration.timeout = 5000;
         return this;
     }
     public HelpPage validationSearchText (String validationText) {
