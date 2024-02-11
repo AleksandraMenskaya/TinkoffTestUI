@@ -79,8 +79,9 @@ ____
 ## <img width="4%" style="vertical-align:middle" title="Jenkins" src="src/test/resources/icon/Jenkins.png"/> Сборка в <a target="_blank" href="https://jenkins.autotests.cloud/job/TinkoffTestUI/"> Jenkins </a>
 Для доступа в Jenkins необходима регистрация на ресурсе [Jenkins](https://jenkins.autotests.cloud/)
 
-![build](src/test/resources/icon/Params_Jenkins.png "Сборка Jenkins")
 Для запуска сборки необходимо перейти в раздел <code>Build with parameters</code>, выбрать необходимые параметры и нажать кнопку <code>Build</code>.
+![build](src/test/resources/icon/Params_Jenkins.png "Сборка Jenkins")
+
 
 ###  Параметры сборки в Jenkins:
 - TASK (набор тестов для запуска)
