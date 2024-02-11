@@ -28,7 +28,6 @@ ____
 <a href="https://junit.org/junit5/"><img width="6%" title="JUnit5" src="src/test/resources/icon/JUnit5.png"></a>
 <a href="https://github.com/"><img width="6%" title="GitHub" src="src/test/resources/icon/GitHub.svg"></a>
 <a href="https://www.jenkins.io/"><img width="6%" title="Jenkins" src="src/test/resources/icon/Jenkins.png"></a>
-<a href="https://web.telegram.org/a/"><img width="6%" title="Telegram" src="src/test/resources/icon/Telegram.png"></a>
 <a href="https://www.atlassian.com/ru/software/jira/"><img width="5%" title="Jira" src="src/test/resources/icon/Jira.png"></a>
 </p>
 
@@ -117,16 +116,6 @@ ____
 </p>
 
 ![jenkins](media/screen/runAllureTestOps.png "График Jenkins")
-
-____
-<a id="tg"></a>
-## <img width="4%" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"/> Уведомления в Telegram с использованием бота
-
-После завершения сборки, бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов в специально настроенный чат.
-
-<p align="center">
-<img width="70%" title="Telegram Notifications" src="media/screen/bot.png">
-</p>
 
 ____
 <a id="video"></a>
