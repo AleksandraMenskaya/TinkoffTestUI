@@ -77,10 +77,10 @@ gradle clean HelpPage_Test запуск тестов проверки для с�
 ```
 ____
 <a id="jenkins"></a>
-## <img width="4%" style="vertical-align:middle" title="Jenkins" src="media/logo/Jenkins.svg"> </a> Сборка в <a target="_blank" href="https://jenkins.autotests.cloud/job/ElenaMalysheva98-23-17/"> Jenkins </a>
+## <img width="4%" style="vertical-align:middle" title="Jenkins" src="src="src/test/resources/icon/Jenkins.png""> </a> Сборка в <a target="_blank" href="https://jenkins.autotests.cloud/job/TinkoffTestUI/"> Jenkins </a>
 Для доступа в Jenkins необходима регистрация на ресурсе [Jenkins](https://jenkins.autotests.cloud/)
 
-![build](media/screen/Build_Jenkins.png "Сборка Jenkins")
+![build](src/test/resources/icon/Jenkins.png "Сборка Jenkins")
 Для запуска сборки необходимо перейти в раздел <code>Build with parameters</code>, выбрать необходимые параметры и нажать кнопку <code>Build</code>.
 
 ###  Параметры сборки в Jenkins:
@@ -95,7 +95,7 @@ ____
 </p>
 <p>После выполнения сборки, в блоке <code>Build History</code> напротив номера сборки появятся значки <code>Allure Report</code> и <code>Allure TestOps</code>, при клике на которые откроется страница с сформированным html-отчетом и тестовой документацией соответственно.</p>
 
-![jenkins](src="src/test/resources/icon/Jenkins.png" "График Jenkins")
+![jenkins]("src/test/resources/icon/Jenkins.png" "График Jenkins")
 
 ____
 <a id="allureReport"></a>
