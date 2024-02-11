@@ -71,7 +71,7 @@ ____
 ```
 gradle clean All_test  запуск всех тестов
 gradle clean Localizationtinkoffblack_test  запуск тестов проверки локализации
-gradle clean FormForDebitCard_Test запуск тестов проверки для карты tinkoff black
+gradle clean FormForDebitCard_Test запуск тестов проверки для формы tinkoff black
 gradle clean HelpPage_Test запуск тестов проверки для страницы help
 ```
 ____
