@@ -12,7 +12,7 @@ public class LocalizationTinkoffBlackTest extends TestBaseTinkoff {
     private DebitCardLocalPage debitCardLocalPage = new DebitCardLocalPage();
 
     @Tag("LocalizationTinkoffBlackTest")
-    @Tag("All_test")
+    @Tag("AllTest")
     @DisplayName("Локализация страницы для определенного url")
     @CsvSource(value = {
             "/cards/debit-cards/tinkoff-black/foreign/kg/ , Россияда жашоо жана иштөө үчүн ыңгайлуу карта",

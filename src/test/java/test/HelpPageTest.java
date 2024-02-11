@@ -13,7 +13,7 @@ import static io.qameta.allure.Allure.step;
 public class HelpPageTest extends TestBaseTinkoff {
     private pages.HelpPage helpPage = new HelpPage();
     @Tag("HelpPageTest")
-    @Tag("All_test")
+    @Tag("AllTest")
     @DisplayName("Первый элемент поисковой выдачи содержит текст запроса")
     @ParameterizedTest(name = "Если искать {0}, то первый элемент в поисковой выдачи будет {0}")
     @ValueSource(strings = {
@@ -35,7 +35,7 @@ public class HelpPageTest extends TestBaseTinkoff {
 
     @DisplayName("Отправка оценки")
     @Tag("HelpPageTest")
-    @Tag("All_test")
+    @Tag("AllTest")
     @Test
     void feedbackSend () {
         step("Открываем страницу help", () -> {
