@@ -8,6 +8,7 @@ import org.junit.jupiter.params.provider.ArgumentsSource;
 import org.junit.jupiter.params.ParameterizedTest;
 import data.URLsDesignCard;
 import data.Pair;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 import pages.DebitCardFormPage;
 import static io.qameta.allure.Allure.step;
@@ -140,6 +141,29 @@ public class FormDebitCardTest extends TestBaseTinkoff {
         step("Проверяем скролл к форме tinkoff black по клику на кнопку Оформита карту", () -> {
         DebitCardFormPage.transitionToForm()
                          .checkTitleForm("Получите Tinkoff Black уже сегодня");
+        });
+    }
+    @DisplayName("Валидация поля ФИО")
+    @Tag("FormDebitCardTest")
+    @Tag("AllTest")
+    @CsvSource(value = {
+            "Иванов ; Укажите фамилию, имя и отчество через пробел",
+            "Иванов / ; Используйте только русские буквы и дефис",
+            "АААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААА ААААААААААААААААААААААААААААААААААА ААААААААААА ; Максимум — 133 символа"
+    }, delimiter = ';')
+    @ParameterizedTest(name = "Для ФИО {0} отображается ошибка валидации")
+    void validationEmailField (String fio, String error) {
+        step("Открываем страницу tinkoff black", () -> {
+            DebitCardFormPage.openRusBlackCardPage();
+        });
+        step("Скролим к форме", () -> {
+            DebitCardFormPage.scrollToForm();
+        });
+        step("Проверяем ошибку валидации", () -> {
+            DebitCardFormPage.clickFioField()
+                    .fillFioField(fio)
+                    .clickBirthdayField()
+                    .validationFieldText(error);
         });
     }
 }
