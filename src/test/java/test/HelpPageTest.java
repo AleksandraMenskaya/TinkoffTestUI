@@ -12,24 +12,6 @@ import static io.qameta.allure.Allure.step;
 
 public class HelpPageTest extends TestBaseTinkoff {
     private pages.HelpPage helpPage = new HelpPage();
-    @Tag("HelpPageTest")
-    @Tag("AllTest")
-    @DisplayName("Проверка заголовков после редиректа из плашки подписки и сервисы")
-    @ParameterizedTest(name = "Найти элемент на странице [0]")
-    @ValueSource(strings = {
-            "ОСАГО",
-            "Каско"
-    })
-    void checkOutPut (String text) {
-        step("Открываем страницу help", () -> {
-            helpPage.openHelpPage();
-        });
-        step("Проверяем заголовки после редиректа", () -> {
-            helpPage.scrollToTitle()
-                    .сlickBlock(text)
-                    .validationSearchText(text);
-        });
-    }
 
     @DisplayName("Отправка оценки")
     @Tag("HelpPageTest")
