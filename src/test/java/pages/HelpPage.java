@@ -42,7 +42,7 @@ public class HelpPage {
     }
 
     public HelpPage scrollToTitle (){
-        titleName.scrollIntoView(true);
+        titleName.scrollIntoView(false);
         return this;
     }
 
