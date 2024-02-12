@@ -90,12 +90,10 @@ ____
 - SIZE (размер окна браузера, по умолчанию 1920x1080)
 - VERSION (версия браузера, по умолчанию 100.0. Реализован запуск в Firefox на версиях 98.0 и 97.0, а также Chrome 99.0 и 100.0)
 - BROWSER (браузер, по умолчанию chrome)
-<p align="center">
-<img title="parametrs" src="media/screen/parametrs.png">
-</p>
+
 <p>После выполнения сборки, в блоке <code>Build History</code> напротив номера сборки появятся значки <code>Allure Report</code> и <code>Allure TestOps</code>, при клике на которые откроется страница с сформированным html-отчетом и тестовой документацией соответственно.</p>
 
-![jenkins]("src/test/resources/icon/Params_Jenkins.png.png" "График Jenkins")
+![jenkins]("src/test/resources/exampleFromTestRun/allureTestops.png")
 
 ____
 <a id="allureReport"></a>
