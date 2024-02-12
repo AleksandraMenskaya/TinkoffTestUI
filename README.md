@@ -103,7 +103,7 @@ ____
 
 
 <p align="center">
-<img title="Allure Overview" src="src/test/resources/icon/allure.png">
+<img title="Allure Overview" src="src/test/resources/exampleFromTestRun/allure.png">
 </p>
 
 ____
@@ -116,7 +116,7 @@ ____
 <img title="Allure TestOps DashBoard" src="src/test/resources/icon/test_ops.png">
 </p>
 
-![jenkins](media/screen/runAllureTestOps.png "График Jenkins")
+![jenkins](src/test/resources/exampleFromTestRun/test_ops.png")
 
 ____
 <a id="video"></a>
