@@ -91,9 +91,7 @@ ____
 - BROWSER (браузер, по умолчанию chrome)
 
 <p>После выполнения сборки, в блоке <code>Build History</code> напротив номера сборки появятся значки <code>Allure Report</code> и <code>Allure TestOps</code>, при клике на которые откроется страница с сформированным html-отчетом и тестовой документацией соответственно.
-</p>
-<img "src/test/resources/exampleFromTestRun/allureTestops.png"
-</p>
+  
 ____
 <a id="allureReport"></a>
 ## <img width="4%" style="vertical-align:middle" title="Allure Report" src="src/test/resources/icon/Allure_Report.png"/> Пример <a target="_blank" href="https://jenkins.autotests.cloud/job/ElenaMalysheva98-23-17/allure/"> Allure-отчета </a>
