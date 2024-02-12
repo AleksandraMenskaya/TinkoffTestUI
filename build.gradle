@@ -71,19 +71,19 @@ task FormForDebitCard_Test(type: Test) {
     }
 }
 
-task HelpPage_Test(type: Test) {
+task HelpPageTest(type: Test) {
     useJUnitPlatform {
         includeTags("HelpPageTest")
     }
 }
 
-task Localizationtinkoffblack_test(type: Test) {
+task LocalizationtinkoffblackTest(type: Test) {
     useJUnitPlatform {
         includeTags("LocalizationTinkoffBlackTest")
     }
 }
 
-task All_test(type: Test) {
+task AllTest(type: Test) {
     useJUnitPlatform {
         includeTags("AllTest")
     }
