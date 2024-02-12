@@ -80,7 +80,6 @@ ____
 Для доступа в Jenkins необходима регистрация на ресурсе [Jenkins](https://jenkins.autotests.cloud/)
 
 Для запуска сборки необходимо перейти в раздел <code>Build with parameters</code>, выбрать необходимые параметры и нажать кнопку <code>Build</code>.
-![build](src/test/resources/icon/Params_Jenkins.png "Сборка Jenkins")
 
 
 ###  Параметры сборки в Jenkins:
@@ -91,16 +90,16 @@ ____
 - VERSION (версия браузера, по умолчанию 100.0. Реализован запуск в Firefox на версиях 98.0 и 97.0, а также Chrome 99.0 и 100.0)
 - BROWSER (браузер, по умолчанию chrome)
 
-<p>После выполнения сборки, в блоке <code>Build History</code> напротив номера сборки появятся значки <code>Allure Report</code> и <code>Allure TestOps</code>, при клике на которые откроется страница с сформированным html-отчетом и тестовой документацией соответственно.</p>
-
-![jenkins]("src/test/resources/exampleFromTestRun/allureTestops.png")
-
+<p>После выполнения сборки, в блоке <code>Build History</code> напротив номера сборки появятся значки <code>Allure Report</code> и <code>Allure TestOps</code>, при клике на которые откроется страница с сформированным html-отчетом и тестовой документацией соответственно.
+</p>
+<img "src/test/resources/exampleFromTestRun/allureTestops.png"
+</p>
 ____
 <a id="allureReport"></a>
 ## <img width="4%" style="vertical-align:middle" title="Allure Report" src="src/test/resources/icon/Allure_Report.png"/> Пример <a target="_blank" href="https://jenkins.autotests.cloud/job/ElenaMalysheva98-23-17/allure/"> Allure-отчета </a>
 
 
-<p align="center">
+
 <img title="Allure Overview" src="src/test/resources/exampleFromTestRun/allure.png">
 </p>
 
