@@ -14,12 +14,11 @@ public class HelpPageTest extends TestBaseTinkoff {
     private pages.HelpPage helpPage = new HelpPage();
     @Tag("HelpPageTest")
     @Tag("AllTest")
-    @DisplayName("Проверка заголовков после редиректа из плашки Банк")
+    @DisplayName("Проверка заголовков после редиректа из плашки подписки и сервисы")
     @ParameterizedTest(name = "Найти элемент на странице [0]")
     @ValueSource(strings = {
-            "Tinkoff Black",
-            "Тинькофф Платинум",
-            "Вклады и счета"
+            "ОСАГО",
+            "Каско"
     })
     void checkOutPut (String text) {
         step("Открываем страницу help", () -> {

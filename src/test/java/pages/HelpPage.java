@@ -12,11 +12,8 @@ public class HelpPage {
     public SelenideElement
 
 
-        titleBank = $(By.xpath("//h2/*[text()='Банк']")),
-//        blockTinkoffBlack = $(By.xpath("//a[@data-qa-type='uikit/clickable'][descendant::*[text()='Tinkoff Black']]")),
-//        blockTinkoffPlatinum = $(By.xpath("//a[@data-qa-type='uikit/clickable'][descendant::*[text()='Тинькофф Платинум']]")),
-//        blockDepositsAndAccount = $(By.xpath("//a[@data-qa-type='uikit/clickable'][descendant::*[text()='Вклады и счета']]")),
-        firstSuggest = $("[data-test=\"htmlTag title\"]"),
+        titleName = $(By.xpath("//h2/*[text()='Страхование']")),
+        firstSuggest = $("[data-testid=\"container\"] h1"),
         feedbackButton = $(By.xpath("//button[@data-qa-type='uikit/button'][descendant::*[text()='Ответить']]")),
         feedbackIframe = $("[data-test='iframeContainer'] iframe"),
         textModalWindow = $(By.xpath("//*[text()='Была ли полезна страница?']")),
@@ -25,10 +22,8 @@ public class HelpPage {
         thankYouText = $("p");
 
     private SelenideElement getBlock(String title) {
-        String template = "//a[@data-qa-type='uikit/clickable'][descendant::*[text()='%1$s']]";
+        String template = "//a[@data-qa-type='uikit/clickable'][descendant::p[text()='%1$s']]";
         String xPath = String.format(template, title);
-
-        System.out.println("--------------------" + xPath);
         return $(By.xpath(xPath));
     }
 
@@ -51,7 +46,7 @@ public class HelpPage {
     }
 
     public HelpPage scrollToTitle (){
-        titleBank.scrollIntoView(true);
+        titleName.scrollIntoView(true);
         return this;
     }
 
