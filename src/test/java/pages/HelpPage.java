@@ -1,16 +1,12 @@
 package pages;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 public class HelpPage {
     public SelenideElement
-
 
         titleName = $(By.xpath("//h2/*[text()='Страхование']")),
         firstSuggest = $("[data-testid=\"container\"] h1"),
