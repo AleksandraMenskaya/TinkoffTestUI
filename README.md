@@ -103,7 +103,7 @@ ____
 
 
 <p align="center">
-<img title="Allure Overview" src="media/screen/Allure_Report.png">
+<img title="Allure Overview" src="src/test/resources/icon/allure.png">
 </p>
 
 ____
@@ -113,7 +113,7 @@ ____
 На *Dashboard* в <code>Allure TestOps</code> видна статистика количества тестов: сколько из них добавлены и проходятся вручную, сколько автоматизированы. Новые тесты, а так же результаты прогона приходят по интеграции при каждом запуске сборки.
 
 <p align="center">
-<img title="Allure TestOps DashBoard" src="media/screen/DashboardTestOps.png">
+<img title="Allure TestOps DashBoard" src="src/test/resources/icon/test_ops.png">
 </p>
 
 ![jenkins](media/screen/runAllureTestOps.png "График Jenkins")
