@@ -42,7 +42,8 @@ public class HelpPage {
     }
 
     public HelpPage scrollToTitle (){
-        titleName.scrollIntoView(false);
+        titleName.scrollIntoView(true);
+        executeJavaScript("scrollBy(0, 100)"); //скролл для видимости кнопки
         return this;
     }
 
