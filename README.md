@@ -37,8 +37,8 @@ ____
 <code>JUnit 5</code> задействован в качестве фреймворка модульного тестирования.
 При прогоне тестов для удаленного запуска используется [Selenoid](https://aerokube.com/selenoid/).
 
-Для удаленного запуска реализована джоба в <code>Jenkins</code> с формированием Allure-отчета и отправкой результатов в <code>Telegram</code> при помощи бота.
-Также реализована интеграция с <code>Allure TestOps</code> и <code>Jira</code>.
+Для удаленного запуска реализована джоба в <code>Jenkins</code> с формированием Allure-отчета.
+Также реализована интеграция с <code>Allure TestOps</code>.
 
 
 Содержание Allure-отчета для каждого кейса:
@@ -69,10 +69,10 @@ ____
 Локальный запуск.
 Из корневой директории проекта выполнить:
 ```
-gradle clean All_test  запуск всех тестов
-gradle clean Localizationtinkoffblack_test  запуск тестов проверки локализации
-gradle clean FormForDebitCard_Test запуск тестов проверки для формы tinkoff black
-gradle clean HelpPage_Test запуск тестов проверки для страницы help
+gradle clean AllTest  запуск всех тестов
+gradle clean LocalizationtinkoffblackTest  запуск тестов проверки локализации
+gradle clean FormForDebitCardTest запуск тестов проверки для формы tinkoff black
+gradle clean HelpPageTest запуск тестов проверки для страницы help
 ```
 ____
 <a id="jenkins"></a>
