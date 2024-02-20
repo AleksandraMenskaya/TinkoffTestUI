@@ -28,7 +28,6 @@ ____
 <a href="https://junit.org/junit5/"><img width="6%" title="JUnit5" src="src/test/resources/icon/JUnit5.png"></a>
 <a href="https://github.com/"><img width="6%" title="GitHub" src="src/test/resources/icon/GitHub.svg"></a>
 <a href="https://www.jenkins.io/"><img width="6%" title="Jenkins" src="src/test/resources/icon/Jenkins.png"></a>
-<a href="https://www.atlassian.com/ru/software/jira/"><img width="5%" title="Jira" src="src/test/resources/icon/Jira.png"></a>
 </p>
 
 ____
