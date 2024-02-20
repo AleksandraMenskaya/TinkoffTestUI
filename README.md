@@ -9,8 +9,6 @@
 - <a href="#jenkins"> Сборка в Jenkins</a>
 - <a href="#allureReport"> Пример Allure-отчета</a>
 - <a href="#allure"> Интеграция с Allure TestOps</a>
-- <a href="#jira"> Интеграция с Jira</a>
-- <a href="#tg"> Уведомления в Telegram с использованием бота</a>
 - <a href="#video"> Видео примера запуска тестов в Selenoid</a>
 
 
