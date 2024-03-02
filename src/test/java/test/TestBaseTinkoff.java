@@ -3,7 +3,6 @@ package test;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import config.BrowserDriverConfig;
-import io.restassured.RestAssured;
 import org.aeonbits.owner.ConfigFactory;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -21,7 +20,6 @@ public class TestBaseTinkoff {
         BrowserDriverConfig config = ConfigFactory.create(BrowserDriverConfig.class, System.getProperties());
 
         Configuration.baseUrl = "https://www.tinkoff.ru";
-        RestAssured.baseURI = "https://www.tinkoff.ru";
         Configuration.pageLoadStrategy = "eager";
         Configuration.browser = config.getBrowserName();
         Configuration.browserVersion = config.getBrowserVersion();
