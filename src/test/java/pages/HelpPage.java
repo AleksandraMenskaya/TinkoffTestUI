@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 public class HelpPage {
-    public SelenideElement
+    private final SelenideElement
 
         feedbackButton = $(By.xpath("//button[@data-qa-type='uikit/button'][descendant::*[text()='Ответить']]")),
         feedbackIframe = $("[data-test='iframeContainer'] iframe"),

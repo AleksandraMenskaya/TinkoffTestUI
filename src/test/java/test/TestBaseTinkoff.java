@@ -18,7 +18,6 @@ public class TestBaseTinkoff {
     @BeforeAll
     public static void setUp() {
         BrowserDriverConfig config = ConfigFactory.create(BrowserDriverConfig.class, System.getProperties());
-
         Configuration.baseUrl = config.getBaseUrl();
         Configuration.browser = config.getBrowserName();
         Configuration.browserVersion = config.getBrowserVersion();
@@ -26,7 +25,7 @@ public class TestBaseTinkoff {
         Configuration.browserSize = config.getBrowserSize();
         Configuration.pageLoadStrategy = "eager";
 
-        if (!config.getRemoteWebDriver().isEmpty()) {
+        if (config.getRemoteWebDriver() != null) {
             Configuration.remote = config.getRemoteWebDriver();
         }
         DesiredCapabilities capabilities = new DesiredCapabilities();
