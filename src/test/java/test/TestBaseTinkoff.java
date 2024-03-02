@@ -19,10 +19,12 @@ public class TestBaseTinkoff {
     public static void setUp() {
         BrowserDriverConfig config = ConfigFactory.create(BrowserDriverConfig.class, System.getProperties());
 
-        Configuration.baseUrl = "https://www.tinkoff.ru";
-        Configuration.pageLoadStrategy = "eager";
+        Configuration.baseUrl = config.getBaseUrl();
         Configuration.browser = config.getBrowserName();
         Configuration.browserVersion = config.getBrowserVersion();
+
+        Configuration.browserSize = config.getBrowserSize();
+        Configuration.pageLoadStrategy = "eager";
 
         if (!config.getRemoteWebDriver().isEmpty()) {
             Configuration.remote = config.getRemoteWebDriver();
