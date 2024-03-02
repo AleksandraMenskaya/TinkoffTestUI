@@ -71,8 +71,8 @@ task HelpPageTest(type: Test) {
     }
 }
 
-task LocalizationTinkoffBlackTest(type: Test) {
+task LocalizationTest(type: Test) {
     useJUnitPlatform {
-        includeTags("LocalizationTinkoffBlackTest")
+        includeTags("LocalizationTest")
     }
 }

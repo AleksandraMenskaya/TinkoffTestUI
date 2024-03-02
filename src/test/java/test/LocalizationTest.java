@@ -8,7 +8,7 @@ import pages.DebitCardLocalPage;
 
 import static io.qameta.allure.Allure.step;
 
-public class LocalizationTinkoffBlackTest extends TestBaseTinkoff {
+public class LocalizationTest extends TestBase {
     private DebitCardLocalPage debitCardLocalPage = new DebitCardLocalPage();
 
     @Tag("LocalizationTinkoffBlackTest")

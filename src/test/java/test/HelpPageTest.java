@@ -8,7 +8,7 @@ import pages.HelpPage;
 
 import static io.qameta.allure.Allure.step;
 
-public class HelpPageTest extends TestBaseTinkoff {
+public class HelpPageTest extends TestBase {
     private pages.HelpPage helpPage = new HelpPage();
 
     @DisplayName("Отправка оценки")

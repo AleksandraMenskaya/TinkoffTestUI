@@ -14,7 +14,7 @@ import java.util.Map;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 
-public class TestBaseTinkoff {
+public class TestBase {
     @BeforeAll
     public static void setUp() {
         BrowserDriverConfig config = ConfigFactory.create(BrowserDriverConfig.class, System.getProperties());

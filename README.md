@@ -73,7 +73,7 @@ gradle clean Test -Denv=local
 ```
 Запуск тестов проверки локализации
 ```
-gradle clean LocalizationtinkoffblackTest -Denv=local  
+gradle clean LocalizationTest -Denv=local  
 ```
 Запуск тестов проверки для формы tinkoff black
 ```

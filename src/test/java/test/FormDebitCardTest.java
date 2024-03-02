@@ -13,7 +13,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import pages.DebitCardFormPage;
 import static io.qameta.allure.Allure.step;
 
-public class FormDebitCardTest extends TestBaseTinkoff {
+public class FormDebitCardTest extends TestBase {
 
     private DebitCardFormPage DebitCardFormPage = new DebitCardFormPage();
 
