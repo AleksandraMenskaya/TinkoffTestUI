@@ -18,7 +18,6 @@ public class FormDebitCardTest extends TestBaseTinkoff {
     private DebitCardFormPage DebitCardFormPage = new DebitCardFormPage();
 
     @Tag("FormDebitCardTest")
-    @Tag("AllTest")
     @DisplayName("Валидация поля Дата рождения")
     @ArgumentsSource(BirthdayArgumentProvider.class)
     @ParameterizedTest(name = "Для даты {0} текст валидации должен быть {1}")
@@ -40,7 +39,6 @@ public class FormDebitCardTest extends TestBaseTinkoff {
 
     @DisplayName("Проверка дизайнов карты")
     @Tag("FormDebitCardTest")
-    @Tag("AllTest")
     @ValueSource(strings = {
             "/cards/debit-cards/tinkoff-black",
             "/cards/debit-cards/tinkoff-black/foreign/eng"
@@ -77,7 +75,6 @@ public class FormDebitCardTest extends TestBaseTinkoff {
 
     @DisplayName("Валидация заполнения прогресс бара")
     @Tag("FormDebitCardTest")
-    @Tag("AllTest")
     @Test
     void checkProgressBar () {
         step("Открываем страницу tinkoff black", () -> {
@@ -108,7 +105,6 @@ public class FormDebitCardTest extends TestBaseTinkoff {
 
     @DisplayName("Валидация поля электронная почта")
     @Tag("FormDebitCardTest")
-    @Tag("AllTest")
     @ValueSource(strings = {
             "emailemail.com",
             "@email.com",
@@ -132,7 +128,6 @@ public class FormDebitCardTest extends TestBaseTinkoff {
     }
     @DisplayName("Скролл к форме карты Tinkoff Black")
     @Tag("FormDebitCardTest")
-    @Tag("AllTest")
     @Test
     void checkTitleForm () {
         step("Открываем страницу tinkoff black", () -> {
@@ -145,7 +140,6 @@ public class FormDebitCardTest extends TestBaseTinkoff {
     }
     @DisplayName("Валидация поля ФИО")
     @Tag("FormDebitCardTest")
-    @Tag("AllTest")
     @CsvSource(value = {
             "Иванов ; Укажите фамилию, имя и отчество через пробел",
             "Иванов / ; Используйте только русские буквы и дефис",

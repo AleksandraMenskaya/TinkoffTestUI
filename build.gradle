@@ -3,7 +3,7 @@ plugins {
     id 'io.qameta.allure' version '2.11.2'
 }
 
-def allureVersion = "2.25.0",
+def allureVersion = "2.21.0",
     selenideVersion = "6.19.1",
     restAssuredVersion = "5.3.1",
     junitVersion = "5.10.0",
@@ -80,11 +80,5 @@ task HelpPageTest(type: Test) {
 task LocalizationtinkoffBlackTest(type: Test) {
     useJUnitPlatform {
         includeTags("LocalizationTinkoffBlackTest")
-    }
-}
-
-task AllTest(type: Test) {
-    useJUnitPlatform {
-        includeTags("AllTest")
     }
 }

@@ -68,7 +68,7 @@ ____
 
 Запуск всех  тестов
 ```
-gradle clean AllTest -DdeviceHost=local
+gradle clean Test -Denv=local
 
 ```
 Запуск тестов проверки локализации

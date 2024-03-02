@@ -11,6 +11,7 @@ public class DebitCardLocalPage {
             headerBlock = $("div[class=\"application\"] [data-test=\"htmlTag title\"]");
 
     public DebitCardLocalPage openLocalPage (String URL) {
+        System.out.println("openLocalPage " + URL);
         open(URL);
         return this;
     }
