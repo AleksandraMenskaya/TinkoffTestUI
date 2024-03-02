@@ -17,15 +17,15 @@ ____
 ## Используемые инструменты
 
 <p align="center">
-<a href="https://www.java.com/"><img width="6%" title="Java" src="src/test/resources/icon/Java.png"></a>
-<a href="https://selenide.org/"><img width="6%" title="Selenide" src="src/test/resources/icon/Selenide.png"></a>
-<a href="https://aerokube.com/selenoid/"><img width="6%" title="Selenoid" src="src/test/resources/icon/Selenoid.png"></a>
-<a href="https://github.com/allure-framework/allure2"><img width="6%" title="Allure Report" src="src/test/resources/icon/Allure_Report.png"></a>
-<a href="https://qameta.io/"><img width="5%" title="Allure TestOps" src="src/test/resources/icon/Allure_TestOps.png"></a>
-<a href="https://gradle.org/"><img width="6%" title="Gradle" src="src/test/resources/icon/Gradle.png"></a>
-<a href="https://junit.org/junit5/"><img width="6%" title="JUnit5" src="src/test/resources/icon/JUnit5.png"></a>
-<a href="https://github.com/"><img width="6%" title="GitHub" src="src/test/resources/icon/GitHub.svg"></a>
-<a href="https://www.jenkins.io/"><img width="6%" title="Jenkins" src="src/test/resources/icon/Jenkins.png"></a>
+<a href="https://www.java.com/"><img width="6%" title="Java" src="media/icon/Java.png"></a>
+<a href="https://selenide.org/"><img width="6%" title="Selenide" src="media/icon/Selenide.png"></a>
+<a href="https://aerokube.com/selenoid/"><img width="6%" title="Selenoid" src="media/icon/Selenoid.png"></a>
+<a href="https://github.com/allure-framework/allure2"><img width="6%" title="Allure Report" src="media/icon/Allure_Report.png"></a>
+<a href="https://qameta.io/"><img width="5%" title="Allure TestOps" src="media/icon/Allure_TestOps.png"></a>
+<a href="https://gradle.org/"><img width="6%" title="Gradle" src="media/icon/Gradle.png"></a>
+<a href="https://junit.org/junit5/"><img width="6%" title="JUnit5" src="media/icon/JUnit5.png"></a>
+<a href="https://github.com/"><img width="6%" title="GitHub" src="media/icon/GitHub.svg"></a>
+<a href="https://www.jenkins.io/"><img width="6%" title="Jenkins" src="media/icon/Jenkins.png"></a>
 </p>
 
 ____
@@ -85,7 +85,7 @@ gradle clean HelpPageTest -Denv=local
 ```
 ____
 <a id="jenkins"></a>
-## <img width="4%" style="vertical-align:middle" title="Jenkins" src="src/test/resources/icon/Jenkins.png"/> Сборка в <a target="_blank" href="https://jenkins.autotests.cloud/job/TinkoffTestUI/"> Jenkins </a>
+## <img width="4%" style="vertical-align:middle" title="Jenkins" src="media/icon/Jenkins.png"/> Сборка в <a target="_blank" href="https://jenkins.autotests.cloud/job/TinkoffTestUI/"> Jenkins </a>
 Для доступа в Jenkins необходима регистрация на ресурсе [Jenkins](https://jenkins.autotests.cloud/job/TinkoffTestUI/)
 
 Для запуска сборки необходимо перейти в раздел <code>Build with parameters</code>, выбрать необходимые параметры и нажать кнопку <code>Build</code>.
@@ -103,29 +103,29 @@ ____
   
 ____
 <a id="allureReport"></a>
-## <img width="4%" style="vertical-align:middle" title="Allure Report" src="src/test/resources/icon/Allure_Report.png"/> Пример <a target="_blank" href="https://jenkins.autotests.cloud/job/TinkoffTestUI/allure/"> Allure-отчета </a>
+## <img width="4%" style="vertical-align:middle" title="Allure Report" src="media/icon/Allure_Report.png"/> Пример <a target="_blank" href="https://jenkins.autotests.cloud/job/TinkoffTestUI/allure/"> Allure-отчета </a>
 
 
 
-<img title="Allure Overview" src="src/test/resources/exampleFromTestRun/allure.png">
+<img title="Allure Overview" src="media/allure.png">
 </p>
 
 ____
 <a id="allure"></a>
-## <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="src/test/resources/icon/Allure_TestOps.png"/>  Интеграция с <a target="_blank" href="https://allure.autotests.cloud/launch/35691"> Allure TestOps </a>
+## <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="media/icon/Allure_TestOps.png"/>  Интеграция с <a target="_blank" href="https://allure.autotests.cloud/launch/35691"> Allure TestOps </a>
 
 На *Dashboard* в <code>Allure TestOps</code> видна статистика количества тестов: сколько из них добавлены и проходятся вручную, сколько автоматизированы. Новые тесты, а так же результаты прогона приходят по интеграции при каждом запуске сборки.
 
 <p align="center">
-<img title="Allure TestOps DashBoard" src="src/test/resources/exampleFromTestRun/test_ops.png">
+<img title="Allure TestOps DashBoard" src="media/test_ops.png">
 </p>
 
 ____
 <a id="video"></a>
-## <img width="4%" style="vertical-align:middle" title="Selenoid" src="src/test/resources/icon/Selenoid.png"/> Видео примера запуска тестов в Selenoid
+## <img width="4%" style="vertical-align:middle" title="Selenoid" src="media/icon/Selenoid.png"/> Видео примера запуска тестов в Selenoid
 
 В отчетах Allure для каждого теста прикреплен не только скриншот, но и видео прохождения теста
 <p align="center">
- <img title="Selenoid Video" src="src/test/resources/exampleFromTestRun/gif1.gif">
+ <img title="Selenoid Video" src="media/gif1.gif">
 </p>
 
