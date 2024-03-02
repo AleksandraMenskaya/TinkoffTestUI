@@ -65,11 +65,23 @@ ____
 
 Локальный запуск.
 Из корневой директории проекта выполнить:
+
+Запуск всех  тестов
 ```
-gradle clean AllTest -Denv=local запуск всех тестов
-gradle clean LocalizationtinkoffblackTest -Denv=local  запуск тестов проверки локализации
-gradle clean FormForDebitCardTest -Denv=local запуск тестов проверки для формы tinkoff black
-gradle clean HelpPageTest -Denv=local запуск тестов проверки для страницы help
+gradle clean AllTest -DdeviceHost=local
+
+```
+Запуск тестов проверки локализации
+```
+gradle clean LocalizationtinkoffblackTest -Denv=local  
+```
+Запуск тестов проверки для формы tinkoff black
+```
+gradle clean FormForDebitCardTest -Denv=local 
+```
+Запуск тестов проверки для страницы help
+```
+gradle clean HelpPageTest -Denv=local
 ```
 ____
 <a id="jenkins"></a>
