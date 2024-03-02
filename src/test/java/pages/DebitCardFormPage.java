@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class DebitCardFormPage {
-    public SelenideElement formBlock =  $("#form"),
+    private final SelenideElement formBlock =  $("#form"),
             fioClick = $("[data-qa-type=\"uikit/inputFio.inputBox.inputContainer\"]"),
             fioInput = $("[data-qa-type=\"uikit/inputFio.value.input\"]"),
             mobilePhoneClick = $("[data-qa-type=\"uikit/inputPhone.inputBox.inputContainer\"]"),

@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 
 public class DebitCardLocalPage {
-    public SelenideElement
+    private final SelenideElement
             headerBlock = $("div[class=\"application\"] [data-test=\"htmlTag title\"]");
 
     public DebitCardLocalPage openLocalPage (String URL) {
